@@ -23,7 +23,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-[#323533] p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -80,8 +80,9 @@ const Works = () => {
         >
           {" "}
           Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it.
+          real-world examples of my work. You can see my work as developer,
+          UI/UX designer and 3D Artist. Each project is briefly described with
+          links to codes and complete projects.
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">

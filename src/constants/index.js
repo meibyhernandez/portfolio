@@ -23,6 +23,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  foody,
+  cyberpunk,
+  car,
 } from "../assets";
 
 export const navLinks = [
@@ -176,58 +179,117 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
         name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://meibyhernandez.github.io/restaturant/",
   },
   {
-    name: "Job IT",
+    name: "Video Player",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables users to search for videos, divided on different categories like coding, comedy, music, among others...",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "API",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://meibyhernandez.github.io/videoSearcher/",
   },
   {
-    name: "Trip Guide",
+    name: "Meditation app",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Web based application designed to help users meditate with rain or ocean sounds. Includes a timer.",
     tags: [
       {
-        name: "nextjs",
+        name: "html",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "javascript",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/meibyhernandez/apptut_meditation",
+  },
+  {
+    name: "Foody app",
+    description:
+      "Foody tracky is a mobile application designed to improve times and sales of meals in amusements parks. Allowing costumers get easier the food without losing time waiting in a line.",
+    tags: [
+      {
+        name: "figma",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "user Experience",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ui",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: foody,
+    source_code_link: "https://uxfol.io/p/38f4be64/036b35cb",
+  },
+  {
+    name: "UE - Futuristic Scenery",
+    description:
+      "Show the composition and the lighting in a futuristic city scene. Using the unreal engine 5 and the niagara system to create some dust particles, with the help of assets provided by leartes studio.",
+    tags: [
+      {
+        name: "UE5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Particles",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Composition",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cyberpunk,
+    source_code_link: "https://www.artstation.com/artwork/NGV4Pd",
+  },
+  {
+    name: "Mini Cooper",
+    description:
+      "Seeing this mini cooper makes me think of how things that were once important are abandoned and forgotten 🤓 Textured with substance painter and the environment with UE 5 with quixel megascans..",
+    tags: [
+      {
+        name: "UE5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Substance painter",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Quixel",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: car,
+    source_code_link: "https://www.artstation.com/artwork/8wARxQ",
   },
 ];
 
