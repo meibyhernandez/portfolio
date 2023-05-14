@@ -22,11 +22,8 @@ const App = () => {
         <About />
         <Tech />
         <Works />
-
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        <Contact />
+        <div className="relative z-0"></div>
       </div>
     </BrowserRouter>
   );

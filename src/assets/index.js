@@ -26,9 +26,12 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./restaurant.png";
+import jobit from "./player.png";
+import tripguide from "./meditation.png";
+import foody from "./foody.png";
+import cyberpunk from "./cyberpunk.png";
+import car from "./car.png";
 
 export {
   logo2,
@@ -59,4 +62,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  foody,
+  cyberpunk,
+  car,
 };
