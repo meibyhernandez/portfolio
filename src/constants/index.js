@@ -171,6 +171,8 @@ const experiences = [
 const projects = [
   {
     name: "Geritch restaurant",
+     category: "frontend",
+  link_label: "Live demo",
     description:
       "Website created for a famous restaurant in the center of Madrid. It showcase the most famous dishes, cocktails...",
     tags: [
@@ -188,6 +190,8 @@ const projects = [
   },
   {
     name: "Video Player",
+     category: "frontend",
+  link_label: "Live demo",
     description:
       "Web application that enables users to search for videos, divided on different categories like coding, comedy, music, among others...",
     tags: [
@@ -209,6 +213,8 @@ const projects = [
   },
   {
     name: "Meditation app",
+     category: "frontend",
+  link_label: "View on GitHub",
     description:
       "Web based application designed to help users meditate with rain or ocean sounds. Includes a timer.",
     tags: [
@@ -230,6 +236,8 @@ const projects = [
   },
   {
     name: "Foody app",
+    category: "design",
+  link_label: "View case study",
     description:
       "Foody tracky is a mobile application designed to improve times and sales of meals in amusements parks. Allowing costumers get easier the food without losing time waiting in a line.",
     tags: [
@@ -251,6 +259,8 @@ const projects = [
   },
   {
     name: "UE - Futuristic Scenery",
+    category: "3d",
+  link_label: "View on Artstation",
     description:
       "Show the composition and the lighting in a futuristic city scene. Using the unreal engine 5 and the niagara system to create some dust particles, with the help of assets provided by leartes studio.",
     tags: [
@@ -272,6 +282,8 @@ const projects = [
   },
   {
     name: "Mini Cooper",
+    category: "3d",
+  link_label: "View on Artstation",
     description:
       "Seeing this mini cooper makes me think of how things that were once important are abandoned and forgotten 🤓 Textured with substance painter and the environment with UE 5 with quixel megascans..",
     tags: [
