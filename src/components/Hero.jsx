@@ -1,47 +1,68 @@
+
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section
+      id="home"
+      className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#0B0D12] px-6 pb-20 pt-36 text-white sm:px-10 lg:px-20"
+    >
+      {/* Subtle background light */}
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#B7CDD8]" />
-          <div className="w-1 sm:h-80 h-40 orange-gradient" />
-        </div>
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse at 80% 30%, rgba(104,85,160,0.16), transparent 55%)",
+        }}
+      />
 
-        <div>
-          <h2 className={`${styles.heroHeadText} text-[#323533]`}>
-            Hi, I'm <span className="text-[#ADC4BC]">Meiby</span>
-          </h2>
-          <p className={`${styles.heroSubText} mt-1 text-[#323533]`}>
-            I develop 3D props and environments, user{" "}
-            <br className="sm:block hidden" />
-            interfaces and web applications
+      <div className="mx-auto w-full max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <p className="mb-8 text-xs font-medium uppercase tracking-[0.3em] text-[#A99ACA]">
+            Frontend Developer / 3D Environment Artist
           </p>
-        </div>
-      </div>
-      <ComputersCanvas />
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-[#B4BFB5] flex justify-center items-start p-2">
-            <motion.dev
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-[#B4BFB5] mb-1"
-            />
+          <h1 className="max-w-5xl text-5xl font-semibold leading-[1.05] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
+            From pixels to
+            <br />
+            <span className="text-[#B5A4DF]">
+              entire worlds.
+            </span>
+          </h1>
+
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#A5A7B1] sm:text-lg">
+            I'm Meiby Hernández, a Frontend Developer and
+            3D Environment Artist creating intuitive
+            digital interfaces and immersive game worlds.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="#work"
+              className="rounded-full bg-white px-7 py-3 text-sm font-medium text-[#0B0D12] transition-colors hover:bg-[#D6CBEE]"
+            >
+              Explore my work
+            </a>
+
+            <a
+              href="#contact"
+              className="rounded-full border border-white/20 px-7 py-3 text-sm font-medium transition-colors hover:border-white/60"
+            >
+              Get in touch
+            </a>
           </div>
-        </a>
+        </motion.div>
+
+        <div className="mt-24 grid gap-6 border-t border-white/10 pt-7 text-sm text-[#858994] sm:grid-cols-3">
+          <div>01 / Frontend Development</div>
+          <div>02 / Environment & Prop Art</div>
+          <div>03 / Real-time 3D</div>
+        </div>
       </div>
     </section>
   );
