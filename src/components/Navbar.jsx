@@ -1,79 +1,105 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
-import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { logo2, menu, close } from "../assets";
+import { useState } from "react";
+
+const navigationLinks = [
+  { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
-  const [active, setActive] = useState(" ");
-  const [toggle, setToggle] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[#FAF3EB]`}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0B0D12]/90 backdrop-blur-xl">
+      <nav
+        aria-label="Main navigation"
+        className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-20"
+      >
+        {/* Personal brand */}
+        <a
+          href="#home"
+          onClick={() => setMenuOpen(false)}
+          className="flex items-center gap-3 text-white"
         >
-          <img src={logo2} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-[#434845] text-[18px] font-bold cursor-pointer flex">
-            Meiby &nbsp;{" "}
-            <span className="sm:block hidden"> Hernández Morales</span>
-          </p>
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-[#434845]" : "text-secondary"
-              }hover: text-[#434845] text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
+          <span className="text-2xl font-bold tracking-tight">
+            MH<span className="text-[#B5A4DF]">.</span>
+          </span>
 
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          <span className="hidden border-l border-white/20 pl-3 text-sm font-medium sm:block">
+            Meiby Hernández
+          </span>
+        </a>
+
+        {/* Desktop navigation */}
+        <div className="hidden items-center gap-10 md:flex">
+          {navigationLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm text-[#A5A7B1] transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B5A4DF]"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Mobile menu button */}
+        <button
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          className="rounded-md p-2 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B5A4DF] md:hidden"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            aria-hidden="true"
           >
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-[#434845]" : "text-secondary"
-                  }font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
+            {menuOpen ? (
+              <>
+                <path d="M5 5L19 19" />
+                <path d="M19 5L5 19" />
+              </>
+            ) : (
+              <>
+                <path d="M4 7H20" />
+                <path d="M4 12H20" />
+                <path d="M4 17H20" />
+              </>
+            )}
+          </svg>
+        </button>
+      </nav>
+
+      {/* Mobile navigation */}
+      {menuOpen && (
+        <div
+          id="mobile-navigation"
+          className="border-t border-white/10 bg-[#0B0D12] px-6 py-6 md:hidden"
+        >
+          <div className="flex flex-col gap-6">
+            {navigationLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-base text-[#D5D2DD] transition-colors hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </header>
   );
 };
 
