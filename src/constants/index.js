@@ -113,60 +113,80 @@ const technologies = [
   },
 ];
 
+
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Environment Artist",
+    company_name: "Psiontech — SoulShards",
+    description:
+      "Creating real-time environments and assets for a game developed in Unreal Engine 5.",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Created modular environments, props, and architectural assets.",
+      "Worked with trim sheets, texture baking, foliage, and set dressing.",
+      "Optimized assets using LODs, Nanite, and instancing techniques.",
     ],
+    tags: ["Unreal Engine 5", "Maya", "Substance 3D", "ZBrush"],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Frontend Developer",
+    company_name: "Endless Adventures",
+    description:
+      "Developed web interfaces and worked on integrations between web technologies and interactive applications.",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built frontend interfaces using React.",
+      "Worked with PlayFab and Unity-to-web integrations.",
+      "Collaborated on UI implementation and design.",
     ],
+    tags: ["React", "JavaScript", "PlayFab", "Figma"],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "3D Artist & Unity Developer",
+    company_name: "WayTic",
+    description:
+      "Created interactive applications and 3D content for mobile and desktop experiences.",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Modeled and animated 3D assets.",
+      "Developed interactive applications using Unity.",
+      "Integrated visual assets into real-time projects.",
     ],
+    tags: ["Unity", "3D Modeling", "Animation"],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Frontend & UI/UX Developer",
+    company_name: "Universidad de Caldas",
+    description:
+      "Worked on frontend development, interface design, and augmented reality experiences.",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed user interfaces for digital applications.",
+      "Worked on UI/UX design and interactive prototypes.",
+      "Participated in augmented reality projects using Vuforia.",
     ],
+    tags: ["Frontend", "UI/UX", "Vuforia"],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Colciencias",
+    description:
+      "Contributed to the development of web applications.",
+    points: [
+      "Implemented frontend features using Angular.",
+      "Worked on application interfaces and functionality.",
+    ],
+    tags: ["Angular", "JavaScript", "Frontend"],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Newshore",
+    description:
+      "Worked on frontend development using Angular.",
+    points: [
+      "Contributed to web application interfaces.",
+      "Worked with Angular-based frontend components.",
+    ],
+    tags: ["Angular", "Frontend"],
   },
 ];
+
 
 const projects = [
   {
