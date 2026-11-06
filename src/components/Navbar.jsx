@@ -11,10 +11,10 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0B0D12]/90 backdrop-blur-xl">
+    <header className="fixed left-1/2 top-6 z-50 w-[calc(100%-2rem)] max-w-[720px] -translate-x-1/2 rounded-2xl border border-white/20 bg-[#0B0D12]/75 shadow-2xl backdrop-blur-xl sm:rounded-full">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-20"
+        className="mx-auto flex h-14 w-full items-center justify-between px-5 sm:px-7"
       >
         {/* Personal brand */}
         <a

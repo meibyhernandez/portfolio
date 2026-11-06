@@ -1,7 +1,6 @@
 import {
   mobile,
   backend,
-  creator,
   web,
   javascript,
   typescript,
@@ -15,10 +14,6 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
@@ -232,27 +227,32 @@ const projects = [
     source_code_link: "https://meibyhernandez.github.io/videoSearcher/",
   },
   {
-    name: "Meditation app",
+    name: "Scene Flow",
      category: "frontend",
-  link_label: "View on GitHub",
+     featured: true,
+  link_label: "Live demo",
     description:
-      "Web based application designed to help users meditate with rain or ocean sounds. Includes a timer.",
+      "Track tasks, organize visual assets, and keep project progress visible without losing focus on the work itself.",
     tags: [
       {
-        name: "html",
+        name: "Tawilwind",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "React",
         color: "green-text-gradient",
       },
       {
-        name: "javascript",
+        name: "Next.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Supabase",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/meibyhernandez/apptut_meditation",
+    source_code_link: "https://sceneflow-5ema.vercel.app/",
   },
   {
     name: "Foody app",
@@ -280,6 +280,7 @@ const projects = [
   {
     name: "UE - Futuristic Scenery",
     category: "3d",
+    featured: true,
   link_label: "View on Artstation",
     description:
       "Show the composition and the lighting in a futuristic city scene. Using the unreal engine 5 and the niagara system to create some dust particles, with the help of assets provided by leartes studio.",

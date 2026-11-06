@@ -28,7 +28,7 @@ import tesla from "./company/tesla.png";
 
 import carrent from "./restaurant.png";
 import jobit from "./player.png";
-import tripguide from "./meditation.png";
+import tripguide from "./sceneflow.png";
 import foody from "./foody.png";
 import cyberpunk from "./cyberpunk.png";
 import car from "./car.png";

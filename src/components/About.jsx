@@ -1,64 +1,92 @@
-import React from "react";
-import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-import { services } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-[#E9D4CF] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-32 h-32 object-contain"
-        />
-
-        <h3 className="text-[#323533] text-[20px] font-medium text-center">
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+const specializations = [
+  {
+    number: "01",
+    title: "Frontend Development",
+    description:
+      "Building responsive, accessible and interactive web applications using React, TypeScript, Angular and modern frontend technologies.",
+  },
+  {
+    number: "02",
+    title: "Environment & Prop Art",
+    description:
+      "Creating modular environments, detailed props and immersive game worlds using Unreal Engine 5, Maya, ZBrush and Substance 3D.",
+  },
+];
 
 const About = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+    <div className="mx-auto w-full max-w-7xl text-white">
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-[#323533] text-[17px] max-w-3xl leading-[30px]"
-      >
-        Developer and creative artist experienced in the design and creation of
-        responsive, interactive and adaptable websites; game programming and
-        game asset design. Strong attention to detail and design for great
-        end-user experiences.
-      </motion.p>
+        {/* Introduction */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-[#B5A4DF]">
+            01 / About me
+          </p>
 
-      <div className="mt-20 flex flex-wrap items-center gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+          <h2 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+            Where code meets
+            <span className="text-[#B5A4DF]">
+              {" "}creativity.
+            </span>
+          </h2>
+
+          <p className="mt-8 text-base leading-8 text-[#C5C6D0]">
+            I'm Meiby, a Frontend Developer and 3D
+            Environment Artist with experience building
+            web applications, interactive experiences
+            and real-time environments.
+          </p>
+
+          <p className="mt-5 text-base leading-8 text-[#9294A3]">
+            My background combines technical
+            problem-solving and visual storytelling.
+            Whether I'm developing intuitive interfaces
+            or creating immersive game environments,
+            I focus on thoughtful design, performance
+            and attention to detail.
+          </p>
+        </motion.div>
+
+        {/* Areas of expertise */}
+        <div className="flex flex-col gap-5">
+          {specializations.map((area, index) => (
+            <motion.article
+              key={area.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+              className="rounded-2xl border border-white/10 bg-[#14161E] p-7 transition-colors duration-300 hover:border-[#B5A4DF]/40"
+            >
+              <span className="text-xs font-medium text-[#B5A4DF]">
+                {area.number} / Specialization
+              </span>
+
+              <h3 className="mt-5 text-xl font-semibold">
+                {area.title}
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-[#A5A7B1]">
+                {area.description}
+              </p>
+            </motion.article>
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
