@@ -30,8 +30,11 @@ import carrent from "./restaurant.png";
 import jobit from "./player.png";
 import tripguide from "./sceneflow.png";
 import foody from "./foody.png";
-import cyberpunk from "./cyberpunk.png";
-import car from "./car.png";
+import cyberpunk from "./cyberpunk.jpg";
+import god from "./god.png";
+import car from "./car.jpg";
+import snow from "./snow.png";
+import lamp from "./lamp.jpg";
 
 export {
   logo2,
@@ -65,4 +68,7 @@ export {
   foody,
   cyberpunk,
   car,
+  god, 
+  snow,
+  lamp
 };

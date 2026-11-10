@@ -21,6 +21,9 @@ import {
   foody,
   cyberpunk,
   car,
+  god,
+  snow,
+  lamp,
 } from "../assets";
 
 export const navLinks = [
@@ -280,7 +283,7 @@ const projects = [
   {
     name: "UE - Futuristic Scenery",
     category: "3d",
-    featured: true,
+    
   link_label: "View on Artstation",
     description:
       "Show the composition and the lighting in a futuristic city scene. Using the unreal engine 5 and the niagara system to create some dust particles, with the help of assets provided by leartes studio.",
@@ -324,6 +327,88 @@ const projects = [
     image: car,
     source_code_link: "https://www.artstation.com/artwork/8wARxQ",
   },
+  {
+    name: "God Ray",
+    category: "3d",
+  link_label: "View on Artstation",
+    description:
+      "A stunning god ray effect created using Unreal Engine 5 and the Niagara system.",
+    tags: [
+      {
+        name: "UE5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Particles",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Lighting",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: god,
+    source_code_link: "https://www.artstation.com/artwork/kl0396",
+  },
+  {
+    name: "Snowy Mountain",
+    category: "3d",
+  link_label: "View on Artstation",
+    description:
+      "A beautiful snowy mountain scene created using Unreal Engine 5 and the Niagara system.",
+    tags: [
+      {
+        name: "UE5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Particles",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Environment",
+        color: "pink-text-gradient",
+      },
+       {
+        name: "Set Dressing",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: snow,
+    source_code_link: "https://www.artstation.com/artwork/14ekBq",
+  },
+  {
+    name: "Elven Lamp",
+    category: "3d",
+    featured: true,
+  link_label: "View on Artstation",
+    description:
+      "A mystical elven lamp designed for a fantasy setting.",
+    tags: [
+      {
+        name: "UE5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Substance painter",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Maya",
+        color: "pink-text-gradient",
+      },
+       {
+        name: "Zbrush",
+        color: "pink-text-gradient",
+      },
+       {
+        name: "UV Mapping",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: lamp,
+    source_code_link: "https://www.artstation.com/artwork/RqLEBy",
+  }
 ];
 
 export { services, technologies, experiences, projects };
