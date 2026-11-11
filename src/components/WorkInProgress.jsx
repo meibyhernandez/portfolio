@@ -49,7 +49,11 @@ const workInProgress = [
       "Reusable components and design systems",
       "Frontend testing and application architecture",
     ],
-    media: null,
+       media: {
+  type: "image",
+  src: `${import.meta.env.BASE_URL}wip/finscope.png`,
+  alt: "FinScope frontend development in progress",
+},
     initials: "FS",
     theme:
       "from-[#294653] via-[#24303F] to-[#11131C]",
