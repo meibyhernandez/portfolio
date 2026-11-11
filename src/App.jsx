@@ -9,6 +9,7 @@ import {
   Navbar,
   Tech,
   Works,
+  WorkInProgress,
 } from "./components";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <main>
   <Hero />
   <Works />
+  <WorkInProgress />
   <About />
   <Experience />
   <Tech />
